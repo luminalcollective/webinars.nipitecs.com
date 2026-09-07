@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+.card {
+
+    /* ======================================================================
+       Component Tokens
+       ====================================================================== */
+
+    --card-background: var(--surface);
+    --card-color: var(--text-primary);
+    --card-border: var(--border);
+
+    --card-padding: 2rem;
+    --card-radius: var(--radius-lg);
+
+    --card-shadow: var(--shadow-md);
+    --card-transition: var(--transition-standard);
+
+    /* ======================================================================
+       Component
+       ====================================================================== */
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: var(--card-padding);
+
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+
+    background: var(--card-background);
+    color: var(--card-color);
+
+    box-shadow: var(--card-shadow);
+
+    transition: var(--card-transition);
+}
+
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+.card h2 {
+    margin-bottom: 1.5rem;
+
+    font-size: 1.45rem;
+    letter-spacing: -.035em;
+}
+
+.card h3 {
+    color: var(--brand-support);
+}
+
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+.card--support {
+    --card-background: var(--brand-support-tint);
+    --card-border: var(--brand-support-border);
+}
+
+.card--highlight {
+
+    --card-background:
+        linear-gradient(
+            135deg,
+            var(--brand-accent),
+            var(--brand-accent-tint)
+        );
+
+    --card-border: var(--brand-accent);
+    --card-color: var(--brand-on-accent);
+}
+
+.card--neutral {
+    --card-background: var(--surface-muted);
+}
+
+.card--outline {
+    --card-background: transparent;
+    --card-border: var(--brand-primary);
+}
+
+.card--ghost {
+    --card-background: transparent;
+    --card-border: transparent;
+    --card-shadow: none;
+}
+
+
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+
+.card--sm {
+    --card-padding: 1.25rem;
+}
+
+.card--lg {
+    --card-padding: 2.5rem;
+}
+
+
+/* ==========================================================================
+   States
+   ========================================================================== */
+
+.card.is-hoverable:hover {
+    transform: translateY(-2px);
+}
+
+.card.is-clickable {
+    cursor: pointer;
+}
+
+
+/* ==========================================================================
+   Statistics Card
+   ========================================================================== */
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.card--stat {
+
+    display: grid;
+    gap: .5rem;
+
+    flex: 0 0 170px;
+
+    min-height: 110px;
+
+    --card-padding: 1.25rem;
+    --card-radius: var(--radius-md);
+    --card-background: var(--surface-elevated);
+    --card-shadow: var(--shadow-sm);
+}
+
+.card--stat strong {
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+
+    color: var(--brand-primary);
+}
+
+.card--stat span {
+    color: var(--text-secondary);
+
+    font-size: .9rem;
+    line-height: 1.4;
+}

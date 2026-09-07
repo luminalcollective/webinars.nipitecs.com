@@ -1,0 +1,20 @@
+/* ==========================================================================
+   NIPITECS COMPONENTS
+   Master Import File
+   ========================================================================== */
+
+@import url("accordion.css");
+@import url("alerts.css");
+@import url("avatar.css");
+@import url("badges.css");
+@import url("brand.css");
+@import url("buttons.css");
+@import url("cards.css");
+@import url("countdown.css");
+@import url("forms.css");
+@import url("lists.css");
+@import url("modals.css");
+@import url("tables.css");
+@import url("tabs.css");
+@import url("timeline.css");
+@import url("toasts.css");

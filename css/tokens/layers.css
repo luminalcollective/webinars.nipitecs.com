@@ -1,0 +1,12 @@
+:root {
+
+    --z-base: 1;
+    --z-header: 100;
+    --z-dropdown: 500;
+    --z-overlay: 900;
+    --z-modal: 1000;
+    --z-toast: 1100;
+    --z-tooltip: 1200;
+    --z-sticky: 1300;
+
+}

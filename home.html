@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NIPITECS Webinar Portal</title>
+
+    <meta name="theme-color" content="#121212">
+    <meta name="color-scheme" content="dark">
+    <link rel="stylesheet" href="css/base/normalize.css">
+    <script src="https://kit.fontawesome.com/28a909d194.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body class="page page-home">
+
+    <header class="header">
+
+        <!-- ==========================================================
+         Site Header
+    =========================================================== -->
+        <section class="navbar__wrap">
+            <nav class="navbar navbar--hero flex items-center justify-between" aria-label="Primary">
+
+                <!-- ======================================================
+         Brand
+    ======================================================= -->
+
+                <a href="/" class="brand" aria-label="NIPITECS Home">
+
+                    <img class="brand__logo brand__logo--dark" src="images/logo/Text_White.png" alt="NIPITECS">
+
+                    <img class="brand__logo brand__logo--light" src="images/logo/Text_Black.png" alt="NIPITECS">
+
+                    <div class="brand__text">
+
+                        <p class="brand__name">
+
+                            Webinar Portal
+
+                        </p>
+
+                    </div>
+
+                </a>
+
+                <!-- ======================================================
+         Actions
+    ======================================================= -->
+
+                <div class="navbar__actions flex items-center gap-2">
+
+                    <!-- Dashboard -->
+
+                    <a href="#" class="btn btn--ghost btn--sm">
+
+                        Dashboard
+
+                    </a>
+
+                    <!-- Notifications -->
+
+                    <button class="btn btn--icon btn--ghost navbar__notifications" type="button"
+                        aria-label="Notifications">
+
+                        <!-- Bell Icon -->
+
+                        <span class="badge badge--danger badge--sm">
+
+                            3
+
+                        </span>
+
+                    </button>
+
+                    <!-- Theme Toggle -->
+
+                    <button class="btn btn--icon btn--ghost" type="button" aria-label="Switch theme"
+                        aria-pressed="false">
+
+                        <!-- Theme Icon -->
+
+                    </button>
+
+                    <!-- User Menu -->
+                    <button class="avatar avatar--sm" type="button" aria-label="Open user menu" aria-haspopup="menu"
+                        aria-expanded="false">
+
+                        <img class="avatar__image" src="images/avatar/default.png" alt="User profile">
+                    </button>
+
+                </div>
+
+            </nav>
+        </section>
+
+        <section class="container hero">
+            <div class="hero__layout">
+
+                <div class="hero__content">
+                    <span class="badge">
+                        Live • Zoom-powered • NIPITECS
+                    </span>
+
+                    <h1 class="hero__title heading-xl">
+                        Webinar Platform,
+                        <span class="highlight">
+                            BUILT
+                        </span>
+                        for <span class="marker">NIPITECS</span>.
+                    </h1>
+
+                    <p class="hero__description">
+                        Secure registration,
+                        personalised attendee management,
+                        and controlled webinar access.
+                    </p>
+
+                    <div class="stats-grid">
+
+                        <div class="card card--stat card--highlight">
+                            <strong>5</strong>
+                            <span>Sessions</span>
+                        </div>
+
+                        <div class="card card--stat">
+                            <strong>15+</strong>
+                            <span>Speakers</span>
+                        </div>
+
+                        <div class="card card--stat">
+                            <strong>1</strong>
+                            <span>Conference</span>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <aside id="eventCard" class="card card--summary">
+
+                    <h3>Upcoming Webinar</h3>
+
+                    <div class="summary__item">
+                        <span>Event</span>
+                        <strong>[EVENT_NAME]</strong>
+                    </div>
+
+                    <div class="summary__item">
+                        <span>Date</span>
+                        <strong>[EVENT_DATE] • [EVENT_TIME]</strong>
+                    </div>
+
+                    <div class="summary__item">
+                        <span>Format</span>
+                        <strong>[EVENT_FORMAT]</strong>
+                    </div>
+
+                    <div class="summary__item">
+                        <span>Access</span>
+                        <strong>[EVENT_PRICE]</strong>
+                    </div>
+
+                    <div id="statusMessage" class="alert alert--highlight">
+
+                        Registration is currently open. Complete the form to
+                        secure your place.
+
+                    </div>
+                    <section class="countdown">
+                        <div id="countdownWrap" class="countdown">
+                            <span class="badge">
+                                Next Event
+                            </span>
+                            <div id="countdown" class="countdown__timer">
+
+                                --:--:--
+
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+
+    </header>
+
+    <!-- ==========================================================
+         Main
+    =========================================================== -->
+
+    <main class="site-main">
+
+        <div class="container">
+
+            <!-- Introduction -->
+
+            <section class="section section--intro">
+
+                <div class="grid grid--2">
+
+                    <article class="card">
+
+                        <h2>Why this Portal Matters</h2>
+
+                        <ul class="feature-list">
+                            <li>Own the attendee journey from registration to follow-up.</li>
+                            <li>Store registration data in your own system rather than relying on Zoom alone.</li>
+                            <li>Use personalised join tokens to control access and revocation.</li>
+                            <li>Coordinate reminders, certificates and analytics from one place.</li>
+                        </ul>
+
+                    </article>
+
+                    <article class="card">
+
+                        <h2>Event Agenda</h2>
+
+                        <ul class="agenda-list">
+                            <li>17:30 – Welcome and speaker introductions</li>
+                            <li>18:00 – Live session with practical examples</li>
+                            <li>18:45 – Q&amp;A and member discussion</li>
+                            <li>19:00 – Follow-up resources and survey</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- Speakers -->
+
+            <section class="section section--speakers">
+
+                <div class="grid grid--2">
+
+                    <article class="card">
+
+                        <h2>Speakers</h2>
+
+                        <ul class="speaker-list">
+                            <li><strong>Dr. Amina Yusuf</strong> – Digital governance and compliance</li>
+                            <li><strong>Rethabile Mokoena</strong> – Platform strategy and member engagement</li>
+                        </ul>
+
+                    </article>
+
+                    <article class="card">
+
+                        <h2>Frequently Asked Questions</h2>
+
+                        <div class="accordion">
+
+                            <div class="accordion-item">
+
+                                <h3>
+
+                                    <button class="accordion-header" id="faq-1-header" type="button"
+                                        aria-expanded="true" aria-controls="faq-1-panel">
+
+                                        <span class="accordion-title">
+                                            Do I need a Zoom account?
+                                        </span>
+
+                                        <span class="accordion-icon" aria-hidden="true">
+
+                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round">
+
+                                                <path d="M6 9l6 6 6-6" />
+
+                                            </svg>
+
+                                        </span>
+
+                                    </button>
+
+                                </h3>
+
+                                <div class="accordion-body" id="faq-1-panel" role="region"
+                                    aria-labelledby="faq-1-header">
+
+                                    <div class="accordion-content">
+
+                                        <p>
+                                            Attendance is possible via the browser or the Zoom application.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="accordion-item">
+
+                                <h3>
+
+                                    <button class="accordion-header" id="faq-2-header" type="button"
+                                        aria-expanded="false" aria-controls="faq-2-panel">
+
+                                        Will I receive reminders?
+
+                                    </button>
+
+                                </h3>
+
+                                <div class="accordion-body" id="faq-2-panel" role="region"
+                                    aria-labelledby="faq-2-header" hidden>
+
+                                    <div class="accordion-content">
+
+                                        <p>
+                                            Yes. Registered attendees receive confirmations,
+                                            reminders and follow-up communication automatically.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+            <!-- Registration -->
+
+            <section class="section section--registration">
+
+                <div class="grid grid--2">
+
+                    <article class="card">
+
+                        <h2>Register Your Place</h2>
+
+                        <form id="registrationForm" class="form">
+
+                            <div class="form-field">
+                                <label for="name">Full Name</label>
+                                <input id="name" class="form-control" name="name" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="email">Email Address</label>
+                                <input id="email" class="form-control" type="email" name="email" required>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="organisation">Organisation</label>
+                                <input id="organisation" class="form-control" name="organisation">
+                            </div>
+
+                            <div class="form-field">
+                                <label for="jobTitle">Job Title</label>
+                                <input id="jobTitle" class="form-control" name="jobTitle">
+                            </div>
+
+                            <div class="form-field">
+                                <label for="phone">Phone</label>
+                                <input id="phone" class="form-control" name="phone">
+                            </div>
+
+                            <div class="form-field">
+
+                                <label for="membershipStatus">
+                                    Membership Status
+                                </label>
+
+                                <select id="membershipStatus" class="form-control" name="membershipStatus">
+
+                                    <option>Member</option>
+                                    <option>Non-member</option>
+                                    <option>Guest</option>
+
+                                </select>
+
+                            </div>
+
+                            <label class="checkbox">
+
+                                <input type="checkbox" name="consent" required>
+
+                                <span>
+                                    I consent to receiving event communications
+                                    and agree to the webinar terms.
+                                </span>
+
+                            </label>
+
+                            <label class="checkbox">
+
+                                <input type="checkbox" name="marketing">
+
+                                <span>
+                                    Send me future event updates and opportunities.
+                                </span>
+
+                            </label>
+
+                            <button class="btn btn-primary" type="submit">
+
+                                Register Now
+
+                            </button>
+
+                        </form>
+
+                        <div id="formMessage" class="alert hidden">
+                            [EVENT_ID]
+                        </div>
+
+                    </article>
+
+                    <aside id="attendeePanel" class="card attendee-card">
+
+                        <h2>Attendee Journey</h2>
+
+                        <p id="attendeeIntro">
+
+                            No registration is active yet.
+                            Use the form to create your attendee record.
+
+                        </p>
+
+                        <div id="attendeeStatus" class="hidden">
+                        </div>
+
+                        <div id="joinSection" class="hidden">
+
+                            <button id="joinButton" class="btn btn-secondary" type="button">
+
+                                Join Webinar
+
+                            </button>
+
+                            <p class="join-hint" id="joinHint">
+
+                                The Join button becomes active within
+                                30 minutes of the scheduled start.
+
+                            </p>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- ==========================================================
+         Footer
+    =========================================================== -->
+
+ <footer class="bottom-bar">
+
+  <div class="container bottom-bar__layout">
+
+    <div class="bottom-bar__brand">
+
+      <small>
+
+        © 2016–2026
+        Powered by <strong>PLAN</strong>.
+
+      </small>
+
+    </div>
+
+    <nav class="bottom-bar__nav text-uppercase" aria-label="Footer">
+
+      <a href="#">
+        Privacy
+      </a>
+
+      <a href="#">
+        Terms
+      </a>
+
+      <a href="#">
+        <i class="fa-solid fa-thumbs-up"></i>
+        Support
+      </a>
+
+      <div class="return-to-main"><a href="https://plan-ng.com">Return to PLAN Website</a></div>
+
+    </nav>
+
+  </div>
+
+</footer>
+
+    <script type="module" src="js/app.js"></script>
+
+</body>
+
+</html>

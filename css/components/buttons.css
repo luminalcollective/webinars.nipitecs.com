@@ -1,0 +1,269 @@
+/* ==========================================================================
+   Button
+   ========================================================================== */
+
+/* ==========================================================================
+   Component Tokens
+   ========================================================================== */
+
+.btn {
+
+    /* ======================================================================
+       Appearance
+       ====================================================================== */
+
+    --button-background: var(--brand-primary);
+    --button-color: var(--brand-on-primary);
+    --button-border: transparent;
+
+    --button-hover-background: var(--brand-primary);
+    --button-hover-color: var(--brand-on-primary);
+    --button-hover-border: transparent;
+
+    --button-shadow: none;
+    --button-hover-shadow: var(--shadow-md);
+
+    --button-focus-ring: 0 0 0 3px var(--brand-primary-tint);
+
+    /* ======================================================================
+       Layout
+       ====================================================================== */
+
+    --button-height: 3rem;
+
+    --button-padding-x: 1.5rem;
+    --button-padding-y: .75rem;
+
+    --button-gap: .6rem;
+
+    --button-radius: var(--radius-md);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --button-font-size: inherit;
+    --button-font-weight: var(--weight-bold);
+    --button-letter-spacing: .04em;
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --button-transition: var(--transition-standard);
+}
+
+
+/* ==========================================================================
+   Component Layout
+   ========================================================================== */
+
+.btn {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--button-gap);
+
+    width: fit-content;
+    min-height: var(--button-height);
+
+    padding:
+        var(--button-padding-y)
+        var(--button-padding-x);
+
+    border: 1px solid var(--button-border);
+    border-radius: var(--button-radius);
+
+    background: var(--button-background);
+    color: var(--button-color);
+
+    box-shadow: var(--button-shadow);
+
+    font-family: inherit;
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    letter-spacing: var(--button-letter-spacing);
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    cursor: pointer;
+    user-select: none;
+
+    transition:
+        background var(--button-transition),
+        color var(--button-transition),
+        border-color var(--button-transition),
+        box-shadow var(--button-transition),
+        transform var(--button-transition);
+}
+
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+.btn--support {
+
+    --button-background: var(--brand-support);
+    --button-color: var(--brand-on-support);
+
+    --button-hover-background: var(--brand-support);
+    --button-hover-color: var(--brand-on-support);
+
+    --button-focus-ring: 0 0 0 3px var(--brand-support-tint);
+
+}
+
+.btn--highlight {
+
+    --button-background: var(--brand-accent);
+    --button-color: var(--brand-on-accent);
+    --button-border: var(--brand-accent);
+
+    --button-hover-background: var(--brand-accent);
+    --button-hover-color: var(--brand-on-accent);
+    --button-hover-border: var(--brand-accent);
+
+    --button-focus-ring: 0 0 0 3px var(--brand-accent-tint);
+
+}
+
+.btn--neutral {
+
+    --button-background: var(--surface-muted);
+    --button-color: var(--text-primary);
+    --button-border: var(--border);
+
+    --button-hover-background: var(--surface);
+    --button-hover-color: var(--text-primary);
+    --button-hover-border: var(--border);
+
+    --button-focus-ring: 0 0 0 3px var(--surface-muted);
+
+}
+
+.btn--outline {
+
+    --button-background: transparent;
+    --button-color: var(--brand-primary);
+    --button-border: var(--brand-primary);
+
+    --button-hover-background: var(--brand-primary);
+    --button-hover-color: var(--brand-on-primary);
+    --button-hover-border: var(--brand-primary);
+
+}
+
+.btn--ghost {
+
+    --button-background: transparent;
+    --button-color: var(--brand-primary);
+    --button-border: transparent;
+
+    --button-hover-background: var(--brand-primary-tint);
+    --button-hover-color: var(--brand-primary);
+    --button-hover-border: transparent;
+
+}
+
+
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+
+.btn--sm {
+
+    --button-height: 2.5rem;
+
+    --button-padding-x: 1rem;
+    --button-padding-y: .5rem;
+
+    --button-font-size: var(--text-sm);
+
+}
+
+.btn--md {
+
+    --button-height: 3rem;
+
+    --button-padding-x: 1.5rem;
+    --button-padding-y: .75rem;
+
+    --button-font-size: var(--text-base);
+
+}
+
+.btn--lg {
+
+    --button-height: 3.5rem;
+
+    --button-padding-x: 2rem;
+    --button-padding-y: 1rem;
+
+    --button-font-size: var(--text-md);
+
+}
+
+
+/* ==========================================================================
+   States
+   ========================================================================== */
+
+.btn:hover:not(:disabled):not(.is-disabled) {
+
+    background: var(--button-hover-background);
+    color: var(--button-hover-color);
+    border-color: var(--button-hover-border);
+
+    transform: translateY(-1px);
+    box-shadow: var(--button-hover-shadow);
+
+}
+
+.btn:active:not(:disabled):not(.is-disabled) {
+
+    transform: translateY(0);
+
+}
+
+.btn:focus-visible {
+
+    outline: none;
+
+    box-shadow:
+        var(--button-focus-ring),
+        var(--button-hover-shadow);
+
+}
+
+.btn:disabled,
+.btn.is-disabled {
+
+    opacity: .5;
+    cursor: not-allowed;
+    pointer-events: none;
+
+}
+
+.btn.is-loading {
+
+    cursor: wait;
+
+}
+
+
+/* ==========================================================================
+   Elements
+   ========================================================================== */
+
+.btn__icon {
+
+    flex-shrink: 0;
+
+}
+/* 
+.btn__label {
+
+} */

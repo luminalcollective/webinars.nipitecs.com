@@ -1,0 +1,136 @@
+/* ==========================================================================
+   Badges
+   ========================================================================== */
+
+.badge {
+
+    /* ======================================================================
+       Component Tokens
+       ====================================================================== */
+
+    --badge-background: var(--brand-primary-tint);
+    --badge-color: var(--brand-primary);
+    --badge-border: transparent;
+
+    --badge-padding-x: 1.4rem;
+    --badge-padding-y: .85rem;
+
+    --badge-radius: var(--radius-pill);
+    --badge-gap: 0;
+    --badge-transition: var(--transition-standard);
+
+    /* ======================================================================
+       Component
+       ====================================================================== */
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--badge-gap);
+
+    width: fit-content;
+
+    padding:
+        var(--badge-padding-y) var(--badge-padding-x);
+
+    border: 1px solid var(--badge-border);
+    border-radius: var(--badge-radius);
+
+    background: var(--badge-background);
+    color: var(--badge-color);
+
+    font: inherit;
+    font-size: var(--text-xs);
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+.badge--support {
+    --badge-background: var(--brand-support-tint);
+    --badge-color: var(--brand-support);
+    --badge-border: var(--brand-support-border);
+}
+
+.badge--highlight {
+    --badge-background: var(--brand-accent);
+    --badge-color: var(--brand-on-accent);
+    --badge-border: var(--brand-accent);
+}
+
+.badge--neutral {
+    --badge-background: var(--surface-muted);
+    --badge-color: var(--text-secondary);
+    --badge-border: var(--border);
+}
+
+.badge--outline {
+    --badge-background: transparent;
+    --badge-color: var(--brand-primary);
+    --badge-border: var(--brand-primary);
+}
+
+.badge--ghost {
+    --badge-background: var(--brand-accent-tint);
+    --badge-color: var(--brand-accent);
+    --badge-border: var(--brand-accent-border);
+
+    --badge-padding-x: 1rem;
+    --badge-padding-y: .6rem;
+
+    --badge-gap: .5rem;
+}
+
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+
+.badge--sm {
+    --badge-padding-x: 1rem;
+    --badge-padding-y: .5rem;
+
+    font-size: .6875rem;
+}
+
+.badge--lg {
+    --badge-padding-x: 1.6rem;
+    --badge-padding-y: 1rem;
+
+    font-size: .875rem;
+}
+
+/* ==========================================================================
+   States
+   ========================================================================== */
+
+.badge.is-disabled {
+    opacity: .5;
+}
+
+.badge.is-clickable {
+    cursor: pointer;
+    transition: var(--badge-transition);
+}
+
+.badge.is-clickable:hover {
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Elements
+   ========================================================================== */
+
+.badge__dot {
+    width: .5rem;
+    height: .5rem;
+
+    border-radius: 50%;
+
+    background: currentColor;
+}

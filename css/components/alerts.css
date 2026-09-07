@@ -1,0 +1,158 @@
+/* ==========================================================================
+   Alert
+   ========================================================================== */
+
+/* ==========================================================================
+   Component Tokens
+   ========================================================================== */
+
+.alert {
+
+    /* ======================================================================
+       Appearance
+       ====================================================================== */
+
+    --alert-background: var(--brand-primary-tint);
+    --alert-color: var(--text-primary);
+    --alert-border: var(--brand-primary);
+
+    /* ======================================================================
+       Layout
+       ====================================================================== */
+
+    --alert-padding-x: var(--space-4);
+    --alert-padding-y: var(--space-4);
+
+    --alert-gap: var(--space-3);
+
+    --alert-radius: var(--radius-lg);
+
+    /* ======================================================================
+       Elements
+       ====================================================================== */
+
+    --alert-icon-size: 1.25rem;
+
+    --alert-title-gap: var(--space-1);
+
+    --alert-actions-gap: var(--space-2);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --alert-transition: var(--transition-standard);
+
+}
+
+
+/* ==========================================================================
+   Component Layout
+   ========================================================================== */
+
+.alert {
+
+    display: flex;
+    align-items: flex-start;
+    gap: var(--alert-gap);
+
+    width: 100%;
+
+    padding:
+        var(--alert-padding-y)
+        var(--alert-padding-x);
+
+    border: 1px solid var(--alert-border);
+    border-radius: var(--alert-radius);
+
+    background: var(--alert-background);
+    color: var(--alert-color);
+
+    transition:
+        background var(--alert-transition),
+        border-color var(--alert-transition),
+        color var(--alert-transition);
+
+}
+
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+/* ... */
+
+
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+
+/* ... */
+
+
+/* ==========================================================================
+   States
+   ========================================================================== */
+
+/* ... */
+
+
+/* ==========================================================================
+   Elements
+   ========================================================================== */
+
+.alert__icon {
+
+    flex-shrink: 0;
+
+    width: var(--alert-icon-size);
+    height: var(--alert-icon-size);
+
+}
+
+.alert__content {
+
+    flex: 1;
+
+}
+
+.alert__title {
+
+    margin: 0 0 var(--alert-title-gap);
+
+    font-weight: var(--weight-bold);
+
+}
+
+.alert__message {
+
+    margin: 0;
+
+}
+
+.alert__actions {
+
+    display: flex;
+    align-items: center;
+    gap: var(--alert-actions-gap);
+
+}
+
+.alert__close {
+
+    flex-shrink: 0;
+
+    margin-left: auto;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    color: inherit;
+
+    cursor: pointer;
+
+    transition: color var(--alert-transition);
+
+}

@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Navbar
+   ========================================================================== */
+
+/* ==========================================================================
+   Component Tokens
+   ========================================================================== */
+
+.navbar {
+
+    /* ======================================================================
+       Appearance
+       ====================================================================== */
+
+    --navbar-background: transparent;
+    --navbar-border: var(--border);
+    --navbar-shadow: none;
+
+    /* ======================================================================
+       Layout
+       ====================================================================== */
+
+    --navbar-height: 4.5rem;
+    --navbar-gap: var(--space-4);
+    --navbar-padding-y: var(--space-2);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    /* None */
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    /* None */
+
+}
+
+
+/* ==========================================================================
+   Component Layout
+   ========================================================================== */
+
+.navbar {
+    --avatar-size: calc(var(--navbar-height) - (2 * var(--navbar-padding-y)));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--navbar-gap);
+
+    min-height: var(--navbar-height);
+    padding-block: var(--navbar-padding-y);
+    background: var(--navbar-background);
+    border-bottom: var(--border-width) solid var(--navbar-border);
+
+}
+
+.navbar__wrap {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding-block: var(--navbar-padding-y);
+    z-index: var(--z-sticky);
+    --navbar-background: var(--surface);
+    --navbar-shadow: var(--shadow-sm);
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        background-color .25s ease,
+        border-color .25s ease,
+        backdrop-filter .25s ease;
+}
+
+.navbar__wrap.is-scrolled {
+    background: rgb(18 18 18 / .75);
+    border-bottom: var(--border-width) solid var(--border);
+}
+
+/* .navbar--hero {
+
+    position: relative;
+    inset: 0 0 auto 0;
+
+    z-index: var(--z-header);
+
+    background: transparent;
+    border: none;
+
+} */

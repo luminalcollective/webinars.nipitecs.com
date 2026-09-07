@@ -1,0 +1,424 @@
+/*
+ * ==========================================================================
+ * PLAN ECOSYSTEM DESIGN SYSTEM
+ * Colour & Identity Tokens
+ * ==========================================================================
+ *
+ * Model
+ *   --main-*    = PLAN platform identity
+ *   --series-*  = programme / series identity
+ *   --tone-*    = persona / character modifiers
+ *   semantic    = UI meaning consumed by components
+ *
+ * Authoritative palettes are defined here. Relative colour syntax is used
+ * only for controlled variants and tonal expression.
+ *
+ * Hard neutral rule:
+ *   The system does not use pure black or pure white.
+ * ==========================================================================
+ */
+
+:root {
+    /* ======================================================================
+       01. Authoritative PLAN Palette
+       ====================================================================== */
+
+    --navy-500: #3A4099;
+    --green-500: #01A85B;
+    --red-500: #E43235;
+
+    /* ======================================================================
+       02. Authoritative NIPITECS Palette
+       ====================================================================== */
+
+    --nipitecs-green-500: #127C3E;
+    --nipitecs-lime-500: #8DC63F;
+    --nipitecs-orange-500: #F58220;
+
+    /* ======================================================================
+       03. YPLAN Palette
+       ====================================================================== */
+
+    --yplan-yellow-500: #FFD400;
+
+    /* ======================================================================
+       04. Neutral Palette
+       ====================================================================== */
+
+    --neutral-950: #121417;
+    --neutral-900: #212121;
+    --neutral-700: #5F6368;
+    --neutral-500: #8A8F98;
+    --neutral-300: #D6D6D6;
+    --neutral-200: #E5E7EB;
+    --neutral-100: #F3F4F6;
+    --neutral-050: #FAFAFA;
+
+    /* ======================================================================
+       05. PLAN Main Identity
+       ====================================================================== */
+
+    --main-primary: var(--navy-500);
+    --main-support: var(--green-500);
+    --main-accent: var(--red-500);
+
+    --main-on-primary: var(--neutral-050);
+    --main-on-support: var(--neutral-950);
+    --main-on-accent: var(--neutral-050);
+
+    /* ======================================================================
+       06. Series Identity Defaults
+       ====================================================================== */
+
+    --series-primary: var(--main-primary);
+    --series-support: var(--main-support);
+    --series-accent: var(--main-accent);
+    --series-highlight: var(--main-support);
+
+    /* ======================================================================
+       07. Tone / Persona Base Variables
+       ====================================================================== */
+
+    --tone-lightness-shift: 0;
+    --tone-chroma-scale: 1;
+    --tone-border-opacity: .24;
+
+    --tone-radius-scale: 1;
+    --tone-spacing-scale: 1;
+    --tone-shadow-scale: 1;
+    --tone-motion-scale: 1;
+
+    --tone-heading-weight: var(--weight-bold);
+    --tone-body-weight: var(--weight-regular);
+
+    --tone-image-saturation: 1;
+    --tone-image-contrast: 1;
+
+    /* ======================================================================
+       08. Relative Colour Variants
+       ====================================================================== */
+
+    --main-primary-hover:
+        oklch(
+            from var(--main-primary)
+            calc(l - .06)
+            calc(c * var(--tone-chroma-scale))
+            h
+        );
+
+    --main-primary-active:
+        oklch(
+            from var(--main-primary)
+            calc(l - .10)
+            calc(c * var(--tone-chroma-scale))
+            h
+        );
+
+    --main-primary-soft:
+        oklch(
+            from var(--main-primary)
+            calc(l + .38)
+            calc(c * .22)
+            h
+        );
+
+    --main-primary-border:
+        oklch(
+            from var(--main-primary)
+            calc(l + .22)
+            calc(c * .45)
+            h
+        );
+
+    --main-support-hover:
+        oklch(
+            from var(--main-support)
+            calc(l - .06)
+            calc(c * var(--tone-chroma-scale))
+            h
+        );
+
+    --main-support-soft:
+        oklch(
+            from var(--main-support)
+            calc(l + .40)
+            calc(c * .22)
+            h
+        );
+
+    --main-accent-hover:
+        oklch(
+            from var(--main-accent)
+            calc(l - .06)
+            calc(c * var(--tone-chroma-scale))
+            h
+        );
+
+    --main-accent-soft:
+        oklch(
+            from var(--main-accent)
+            calc(l + .38)
+            calc(c * .20)
+            h
+        );
+
+    --main-accent-border:
+        oklch(
+            from var(--main-accent)
+            calc(l + .20)
+            calc(c * .45)
+            h
+        );
+
+    /* ======================================================================
+       09. Series Derived Variants
+       ====================================================================== */
+
+    --series-primary-hover:
+        oklch(
+            from var(--series-primary)
+            calc(l - .06 + var(--tone-lightness-shift))
+            calc(c * var(--tone-chroma-scale))
+            h
+        );
+
+    --series-primary-active:
+        oklch(
+            from var(--series-primary)
+            calc(l - .10 + var(--tone-lightness-shift))
+            calc(c * var(--tone-chroma-scale))
+            h
+        );
+
+    --series-primary-soft:
+        oklch(
+            from var(--series-primary)
+            calc(l + .38 + var(--tone-lightness-shift))
+            calc(c * .22 * var(--tone-chroma-scale))
+            h
+        );
+
+    --series-primary-border:
+        color-mix(
+            in oklch,
+            var(--series-primary) calc(var(--tone-border-opacity) * 100%),
+            transparent
+        );
+
+    --series-support-hover:
+        oklch(
+            from var(--series-support)
+            calc(l - .06 + var(--tone-lightness-shift))
+            calc(c * var(--tone-chroma-scale))
+            h
+        );
+
+    --series-support-soft:
+        oklch(
+            from var(--series-support)
+            calc(l + .38 + var(--tone-lightness-shift))
+            calc(c * .22 * var(--tone-chroma-scale))
+            h
+        );
+
+    --series-accent-hover:
+        oklch(
+            from var(--series-accent)
+            calc(l - .06 + var(--tone-lightness-shift))
+            calc(c * var(--tone-chroma-scale))
+            h
+        );
+
+    --series-accent-soft:
+        oklch(
+            from var(--series-accent)
+            calc(l + .38 + var(--tone-lightness-shift))
+            calc(c * .20 * var(--tone-chroma-scale))
+            h
+        );
+
+    --series-accent-border:
+        color-mix(
+            in oklch,
+            var(--series-accent) calc(var(--tone-border-opacity) * 100%),
+            transparent
+        );
+
+    /* ======================================================================
+       10. PLAN Semantic Defaults
+       ====================================================================== */
+
+    --background: var(--neutral-050);
+    --surface: #F8F8F8;
+    --surface-muted: var(--neutral-100);
+    --surface-elevated: #FAFAFA;
+
+    --text-primary: var(--neutral-900);
+    --text-secondary: var(--neutral-700);
+    --text-muted: var(--neutral-500);
+
+    --border: var(--neutral-200);
+    --border-strong: var(--neutral-300);
+
+    --link: var(--main-primary);
+    --link-hover: var(--main-primary-hover);
+
+    --action-primary: var(--main-accent);
+    --action-primary-hover: var(--main-accent-hover);
+    --action-primary-text: var(--neutral-050);
+
+    --action-secondary: var(--main-primary);
+    --action-secondary-hover: var(--main-primary-hover);
+    --action-secondary-text: var(--neutral-050);
+
+    --action-support: var(--main-support);
+    --action-support-hover: var(--main-support-hover);
+    --action-support-text: var(--neutral-950);
+
+    /* ======================================================================
+       11. Status Colours
+       ====================================================================== */
+
+    --success: var(--green-500);
+    --success-soft:
+        oklch(from var(--success) calc(l + .40) calc(c * .20) h);
+    --success-text: var(--neutral-950);
+
+    --warning: var(--nipitecs-orange-500);
+    --warning-soft:
+        oklch(from var(--warning) calc(l + .38) calc(c * .20) h);
+    --warning-text: var(--neutral-950);
+
+    --danger: var(--red-500);
+    --danger-soft:
+        oklch(from var(--danger) calc(l + .38) calc(c * .20) h);
+    --danger-text: var(--neutral-950);
+
+    --info: var(--navy-500);
+    --info-soft:
+        oklch(from var(--info) calc(l + .38) calc(c * .20) h);
+    --info-text: var(--neutral-950);
+
+    /* ======================================================================
+       12. Focus
+       ====================================================================== */
+
+    --focus-color: var(--main-primary);
+    --focus-ring:
+        0 0 0 3px
+        color-mix(in oklch, var(--focus-color) 28%, transparent);
+}
+
+/* ==========================================================================
+   NIPITECS Series
+   Identity remains independently authoritative.
+   ========================================================================== */
+
+[data-series="nipitecs"] {
+    --series-primary: var(--nipitecs-green-500);
+    --series-support: var(--nipitecs-lime-500);
+    --series-accent: var(--nipitecs-orange-500);
+    --series-highlight: var(--nipitecs-lime-500);
+}
+
+/* ==========================================================================
+   CEO Roundtable
+   NIPITECS identity + executive persona.
+   ========================================================================== */
+
+[data-series="nipitecs"][data-tone="executive"],
+[data-series="ceo-roundtable"][data-tone="executive"] {
+    --tone-lightness-shift: -.06;
+    --tone-chroma-scale: .90;
+    --tone-border-opacity: .30;
+
+    --tone-radius-scale: .78;
+    --tone-spacing-scale: 1.10;
+    --tone-shadow-scale: .55;
+    --tone-motion-scale: 1.20;
+
+    --tone-heading-weight: var(--weight-semibold);
+    --tone-body-weight: var(--weight-regular);
+
+    --series-primary:
+        oklch(from var(--nipitecs-green-500) calc(l - .08) calc(c * .90) h);
+
+    --series-support:
+        oklch(from var(--nipitecs-lime-500) calc(l - .07) calc(c * .88) h);
+
+    --series-accent:
+        oklch(from var(--nipitecs-orange-500) calc(l - .07) calc(c * .92) h);
+
+    --series-highlight: var(--series-accent);
+}
+
+/* ==========================================================================
+   YPLAN Series
+   PLAN lineage + distinct youth expression.
+   ========================================================================== */
+
+[data-series="yplan"] {
+    --series-primary: var(--navy-500);
+    --series-support: var(--yplan-yellow-500);
+    --series-accent: var(--red-500);
+    --series-highlight: var(--yplan-yellow-500);
+}
+
+/* ==========================================================================
+   YPLAN Energetic Persona
+   ========================================================================== */
+
+[data-series="yplan"][data-tone="energetic"] {
+    --tone-lightness-shift: .02;
+    --tone-chroma-scale: 1.04;
+    --tone-border-opacity: .20;
+
+    --tone-radius-scale: 1.18;
+    --tone-spacing-scale: 1.02;
+    --tone-shadow-scale: 1.10;
+    --tone-motion-scale: .90;
+
+    --tone-heading-weight: 800;
+    --tone-body-weight: var(--weight-regular);
+
+    --tone-image-saturation: 1.08;
+    --tone-image-contrast: 1.04;
+}
+
+/* ==========================================================================
+   Standard Persona
+   ========================================================================== */
+
+[data-tone="standard"] {
+    --tone-lightness-shift: 0;
+    --tone-chroma-scale: 1;
+    --tone-border-opacity: .24;
+
+    --tone-radius-scale: 1;
+    --tone-spacing-scale: 1;
+    --tone-shadow-scale: 1;
+    --tone-motion-scale: 1;
+
+    --tone-heading-weight: var(--weight-bold);
+    --tone-body-weight: var(--weight-regular);
+
+    --tone-image-saturation: 1;
+    --tone-image-contrast: 1;
+}
+
+/* ==========================================================================
+   Persona-driven base design variables
+   ========================================================================== */
+
+:root,
+[data-tone] {
+    --radius-sm-tone: calc(var(--radius-sm) * var(--tone-radius-scale));
+    --radius-md-tone: calc(var(--radius-md) * var(--tone-radius-scale));
+    --radius-lg-tone: calc(var(--radius-lg) * var(--tone-radius-scale));
+    --radius-xl-tone: calc(var(--radius-xl) * var(--tone-radius-scale));
+
+    --space-5-tone: calc(var(--space-5) * var(--tone-spacing-scale));
+    --space-6-tone: calc(var(--space-6) * var(--tone-spacing-scale));
+    --space-7-tone: calc(var(--space-7) * var(--tone-spacing-scale));
+    --space-8-tone: calc(var(--space-8) * var(--tone-spacing-scale));
+}

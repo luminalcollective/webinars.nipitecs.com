@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Duration
+   ========================================================================== */
+
+:root {
+    --duration-fast: 150ms;
+    --duration-normal: 200ms;
+    --duration-slow: 300ms;
+
+    /* ======================================================================
+       Easing
+       ====================================================================== */
+
+    --ease-standard: ease;
+    --ease-in: ease-in;
+    --ease-out: ease-out;
+    --ease-in-out: ease-in-out;
+
+    /* ======================================================================
+       Common Transitions
+       ====================================================================== */
+
+    --transition-color:
+        color var(--duration-normal) var(--ease-standard),
+        background-color var(--duration-normal) var(--ease-standard),
+        border-color var(--duration-normal) var(--ease-standard);
+
+    --transition-transform:
+        transform var(--duration-fast) var(--ease-standard);
+
+    --transition-shadow:
+        box-shadow var(--duration-normal) var(--ease-standard);
+
+    --transition-standard:
+        color var(--duration-normal) var(--ease-standard),
+        background-color var(--duration-normal) var(--ease-standard),
+        border-color var(--duration-normal) var(--ease-standard),
+        box-shadow var(--duration-normal) var(--ease-standard),
+        transform var(--duration-fast) var(--ease-standard);
+}

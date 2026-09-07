@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Light Theme
+   ========================================================================== */
+
+html[data-theme="light"] {
+
+    color-scheme: light;
+
+    /* Light theme uses the default :root values */
+
+}
+
+html[data-theme="light"] .brand__logo--dark {
+    display: none;
+}
+
+html[data-theme="light"] .brand__logo--light {
+    display: block;
+}

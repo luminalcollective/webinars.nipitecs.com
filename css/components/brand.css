@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Brand
+   ========================================================================== */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand__logo {
+  display: block;
+  width: auto;
+  height: 72px;
+  flex-shrink: 0;
+}
+
+.brand__logo--dark {
+  display: block;
+}
+
+.brand__logo--light {
+  display: none;
+}
+
+html[data-theme="light"] .brand__logo--dark {
+  display: none;
+}
+
+html[data-theme="light"] .brand__logo--light {
+  display: block;
+}
+
+.brand__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: .25rem;
+}
+
+.brand__name {
+  color: var(--text-primary);
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  line-height: 1;
+}

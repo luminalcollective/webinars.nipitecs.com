@@ -1,0 +1,34 @@
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 32px;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.stat {
+    display: grid;
+    flex: 1 1 140px;
+    min-width: 140px;
+    padding: 14px 18px;
+    border-right: 1px solid var(--border);
+    background: transparent;
+}
+
+.stat:last-child {
+    border-right: 0;
+}
+
+.stat strong {
+    color: var(--brand-support);
+}
+
+.stat strong {
+    display: block;
+    font-size: 1.35rem;
+}
+
+.stat-emphasis {
+    box-shadow: inset 0 -3px var(--brand-accent);
+}

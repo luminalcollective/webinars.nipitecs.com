@@ -1,0 +1,51 @@
+form {
+
+        --input-height: 48px;
+    --input-radius: 6px;
+
+    
+    display: grid;
+    gap: 12px;
+}
+
+label {
+    display: grid;
+    gap: 6px;
+    font-weight: 600;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 13px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: var(--surface-elevated);
+    color: var(--text-primary);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--brand-primary);
+    box-shadow: 0 0 0 3px rgba(95, 168, 121, .18);
+    outline: 0;
+}
+
+.checkbox {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-weight: 500;
+    color: var(--nipitecs-dark-secondary-text);
+}
+
+.checkbox input {
+    width: auto;
+    margin-top: 4px;
+}
+
+.join-hint {
+    margin-top: 8px;
+}

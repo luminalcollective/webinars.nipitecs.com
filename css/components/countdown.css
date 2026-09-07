@@ -1,0 +1,16 @@
+.countdown {
+  display: grid;
+  gap: .75rem;
+}
+
+.countdown__timer {
+  color: var(--brand-support);
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+}
+
+.timer {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--brand-support);
+}

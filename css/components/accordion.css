@@ -1,0 +1,184 @@
+/* ==========================================================================
+   Accordion
+   ========================================================================== */
+
+/* ==========================================================================
+   Component Tokens
+   ========================================================================== */
+
+.accordion {
+
+    /* ======================================================================
+       Appearance
+       ====================================================================== */
+
+    --accordion-header-color: var(--text-primary);
+    --accordion-body-color: var(--text-secondary);
+
+    /* ======================================================================
+       Icons
+       ====================================================================== */
+
+    --accordion-icon-size: 1.25rem;
+    --accordion-icon-gap: var(--space-4);
+    --accordion-icon-rotation: 180deg;
+
+    /* ======================================================================
+       Layout
+       ====================================================================== */
+
+    --accordion-gap: var(--space-5);
+    --accordion-item-gap: var(--space-2);
+
+    /* ======================================================================
+       Typography
+       ====================================================================== */
+
+    --accordion-header-font: var(--font-heading);
+    --accordion-header-size: var(--text-xl);
+    --accordion-header-weight: var(--weight-semibold);
+    --accordion-header-line-height: var(--line-heading);
+
+    --accordion-body-line-height: var(--line-body);
+
+}
+
+/* ==========================================================================
+   Component Layout
+   ========================================================================== */
+
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--accordion-gap);
+}
+
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+.accordion--default {
+    --accordion-header-color: var(--text-secondary);
+}
+
+.accordion--muted {
+    --accordion-header-color: var(--brand-accent);
+}
+
+.accordion--accent {
+    --accordion-header-color: var(--text-primary);
+}
+
+
+/* ==========================================================================
+   States
+   ========================================================================== */
+
+.accordion-header[aria-expanded="true"] {
+    color: var(--brand-primary);
+}
+
+.accordion-header[aria-expanded="true"] .accordion-icon {
+
+    transform: rotate(var(--accordion-icon-rotation));
+
+}
+
+.accordion-header[aria-expanded="true"]+.accordion-body {
+    display: block;
+}
+
+.accordion-header[aria-expanded="false"]+.accordion-body {
+    display: none;
+}
+
+.accordion-body[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Elements
+   ========================================================================== */
+
+.accordion-header {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+
+    width: 100%;
+
+    padding: 0;
+
+    border: 0;
+    background: transparent;
+
+    cursor: pointer;
+
+    font-family: var(--accordion-header-font);
+    font-size: var(--accordion-header-size);
+    font-weight: var(--accordion-header-weight);
+    line-height: var(--accordion-header-line-height);
+        gap: var(--accordion-icon-gap);
+
+    color: var(--accordion-header-color);
+
+    text-align: left;
+
+}
+
+.accordion-title {
+
+    flex: 1;
+
+}
+
+.accordion-icon {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: var(--accordion-icon-size);
+    height: var(--accordion-icon-size);
+
+    transition:
+        transform var(--transition-standard);
+
+}
+
+.accordion-icon svg {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--accordion-item-gap);
+}
+
+.accordion-body {
+    color: var(--accordion-body-color);
+}
+
+.accordion-body p {
+    margin: 0;
+    line-height: var(--accordion-body-line-height);
+}
+
+.accordion-content {
+    line-height: var(--accordion-body-line-height);
+}
+
+.accordion-content>*:first-child {
+    margin-top: 0;
+}
+
+.accordion-content>*:last-child {
+    margin-bottom: 0;
+}

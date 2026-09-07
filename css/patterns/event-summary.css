@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Event Summary Card
+   ========================================================================== */
+
+.card--summary {
+
+    display: grid;
+    gap: 1.25rem;
+
+    position: sticky;
+    top: 2rem;
+
+    align-self: start;
+
+    width: 100%;
+
+    --card-padding: 2rem;
+    --card-radius: var(--radius-xl);
+}
+
+.status-box {
+    display: grid;
+    gap: 14px;
+}
+
+.card--summary h3 {
+
+    margin: 0;
+
+    color: var(--brand-support);
+
+    font-size: .78rem;
+
+    letter-spacing: .18em;
+    text-transform: uppercase;
+}
+
+.summary__item {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+
+    color: var(--text-secondary);
+}
+
+.summary__item strong {
+
+    color: var(--text-primary);
+
+    text-align: right;
+}
+
+.event-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.event-line strong {
+    max-width: 60%;
+    color: var(--nipitecs-dark-text);
+    text-align: right;
+}

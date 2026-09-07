@@ -1,0 +1,136 @@
+/* ==========================================================================
+   Bottom Bar
+   ========================================================================== */
+
+.bottom-bar {
+
+    /* Component Tokens */
+
+    --bottom-bar-padding-block: 2.75rem;
+    --bottom-bar-border-color: var(--border);
+    --bottom-bar-text-color: var(--text-secondary);
+    --bottom-bar-gap: 2rem;
+
+    /* Component */
+
+    padding-block: var(--bottom-bar-padding-block);
+    padding-inline: var(--bottom-bar-gap);
+    border-top: var(--border-width) solid var(--bottom-bar-border-color);
+
+    color: var(--bottom-bar-text-color);
+
+    font-size: var(--text-sm);
+
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.bottom-bar__layout {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: var(--bottom-bar-gap);
+
+}
+
+/* ==========================================================================
+   Brand
+   ========================================================================== */
+
+.bottom-bar__brand {
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+.bottom-bar__brand small {
+
+    margin: 0;
+
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.bottom-bar__nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 1.5rem;
+
+    flex-wrap: wrap;
+
+}
+
+.bottom-bar__nav a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+    transition: color var(--transition-fast);
+
+}
+
+.bottom-bar__nav a:hover {
+
+    color: var(--text-primary);
+
+}
+
+/* ==========================================================================
+   Return Link
+   ========================================================================== */
+
+.return-to-main {
+
+    margin-left: .5rem;
+
+}
+
+.return-to-main a {
+
+    font-weight: var(--font-weight-medium);
+
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    .bottom-bar__layout {
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+    }
+
+    .bottom-bar__nav {
+
+        justify-content: center;
+
+    }
+
+    .return-to-main {
+
+        margin-left: 0;
+
+    }
+
+}

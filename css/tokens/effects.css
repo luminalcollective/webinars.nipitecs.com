@@ -1,0 +1,87 @@
+/*
+ * ==========================================================================
+ * PLAN ECOSYSTEM DESIGN SYSTEM
+ * Effects
+ * ==========================================================================
+ *
+ * rad-shadow is a controlled, theme-aware depth effect inspired by the
+ * layered shadow approach demonstrated by web.dev's colour-scheme guidance.
+ *
+ * Shadows use a hue-based colour rather than a pure neutral shadow so the
+ * effect can participate in the PLAN visual system.
+ * ==========================================================================
+ */
+
+:root {
+    --rad-shadow-scale: var(--tone-shadow-scale, 1);
+
+    --rad-shadow-1:
+        0 2.8px 2.2px
+        hsl(var(--surface-shadow) /
+            calc((var(--shadow-strength) + .03) * var(--rad-shadow-scale)));
+
+    --rad-shadow-2:
+        0 6.7px 5.3px
+        hsl(var(--surface-shadow) /
+            calc((var(--shadow-strength) + .01) * var(--rad-shadow-scale)));
+
+    --rad-shadow-3:
+        0 12.5px 10px
+        hsl(var(--surface-shadow) /
+            calc((var(--shadow-strength) + .02) * var(--rad-shadow-scale)));
+
+    --rad-shadow-4:
+        0 22.3px 17.9px
+        hsl(var(--surface-shadow) /
+            calc((var(--shadow-strength) + .02) * var(--rad-shadow-scale)));
+
+    --rad-shadow-5:
+        0 41.8px 33.4px
+        hsl(var(--surface-shadow) /
+            calc((var(--shadow-strength) + .03) * var(--rad-shadow-scale)));
+
+    --rad-shadow-6:
+        0 100px 80px
+        hsl(var(--surface-shadow) /
+            calc(var(--shadow-strength) * var(--rad-shadow-scale)));
+}
+
+/* ==========================================================================
+   Layered depth
+   ========================================================================== */
+
+.rad-shadow {
+    box-shadow:
+        var(--rad-shadow-1),
+        var(--rad-shadow-2),
+        var(--rad-shadow-3),
+        var(--rad-shadow-4),
+        var(--rad-shadow-5),
+        var(--rad-shadow-6);
+}
+
+/* ==========================================================================
+   Focus
+   ========================================================================== */
+
+.focus-ring:focus-visible,
+.rad-focus:focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+}
+
+/* ==========================================================================
+   Tone-aware depth
+   ========================================================================== */
+
+[data-tone="executive"] .rad-shadow {
+    --rad-shadow-scale: .55;
+}
+
+[data-tone="energetic"] .rad-shadow {
+    --rad-shadow-scale: 1.10;
+}
+
+/* ==========================================================================
+   END OF FILE
+   ========================================================================== */

@@ -1,0 +1,81 @@
+<article class="card">
+
+    <h2>Register Your Place</h2>
+
+    <form id="registrationForm" class="form">
+
+        <div class="form-field">
+            <label for="name">Full Name</label>
+            <input id="name" class="form-control" name="name" required>
+        </div>
+
+        <div class="form-field">
+            <label for="email">Email Address</label>
+            <input id="email" class="form-control" type="email" name="email" required>
+        </div>
+
+        <div class="form-field">
+            <label for="organisation">Organisation</label>
+            <input id="organisation" class="form-control" name="organisation">
+        </div>
+
+        <div class="form-field">
+            <label for="jobTitle">Job Title</label>
+            <input id="jobTitle" class="form-control" name="jobTitle">
+        </div>
+
+        <div class="form-field">
+            <label for="phone">Phone</label>
+            <input id="phone" class="form-control" name="phone">
+        </div>
+
+        <div class="form-field">
+
+            <label for="membershipStatus">
+                Membership Status
+            </label>
+
+            <select id="membershipStatus" class="form-control" name="membershipStatus">
+
+                <option>Member</option>
+                <option>Non-member</option>
+                <option>Guest</option>
+
+            </select>
+
+        </div>
+
+        <label class="checkbox">
+
+            <input type="checkbox" name="consent" required>
+
+            <span>
+                I consent to receiving event communications
+                and agree to the webinar terms.
+            </span>
+
+        </label>
+
+        <label class="checkbox">
+
+            <input type="checkbox" name="marketing">
+
+            <span>
+                Send me future event updates and opportunities.
+            </span>
+
+        </label>
+
+        <button class="btn btn-primary" type="submit">
+
+            Register Now
+
+        </button>
+
+    </form>
+
+    <div id="formMessage" class="alert hidden">
+    </div>
+
+</article>
+<!-- Attendee Panel -->

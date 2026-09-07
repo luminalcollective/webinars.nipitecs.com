@@ -1,0 +1,187 @@
+/* ==========================================================================
+   Avatar
+   ========================================================================== */
+
+/* ==========================================================================
+   Component Tokens
+   ========================================================================== */
+
+.avatar {
+
+    /* ======================================================================
+       Appearance
+       ====================================================================== */
+
+    --avatar-background: var(--surface-secondary);
+    --avatar-border: var(--border-color);
+    --avatar-border-width: 1px;
+
+    /* ======================================================================
+       Layout
+       ====================================================================== */
+
+    --avatar-size: 2.5rem;
+    --avatar-radius: var(--radius-full);
+
+    /* ======================================================================
+       Motion
+       ====================================================================== */
+
+    --avatar-transition: var(--transition-standard);
+
+}
+
+
+/* ==========================================================================
+   Component Layout
+   ========================================================================== */
+
+.avatar {
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    aspect-ratio: 1;
+
+    flex-shrink: 0;
+
+    padding: 0;
+
+    border: var(--avatar-border-width) solid var(--avatar-border);
+    border-radius: var(--radius-full);
+
+    background: var(--avatar-background);
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition:
+        border-color var(--avatar-transition),
+        background var(--avatar-transition),
+        transform var(--avatar-transition);
+
+}
+
+
+/* ==========================================================================
+   Variants
+   ========================================================================== */
+
+.avatar--square {
+
+    --avatar-radius: var(--radius-md);
+
+}
+
+.avatar--borderless {
+
+    --avatar-border-width: 0;
+
+}
+
+
+/* ==========================================================================
+   Sizes
+   ========================================================================== */
+
+.avatar--sm {
+
+    --avatar-size: 2rem;
+
+}
+
+.avatar--md {
+
+    --avatar-size: 2.5rem;
+
+}
+
+.avatar--lg {
+
+    --avatar-size: 3rem;
+
+}
+
+.avatar--xl {
+
+    --avatar-size: 4rem;
+
+}
+
+
+/* ==========================================================================
+   States
+   ========================================================================== */
+
+.avatar:hover {
+
+    transform: translateY(-1px);
+
+}
+
+.avatar:focus-visible {
+
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 2px;
+
+}
+
+.avatar[aria-expanded="true"] {
+
+    border-color: var(--brand-primary);
+
+}
+
+.avatar.is-active {
+
+    border-color: var(--brand-primary);
+
+}
+
+.avatar.is-disabled {
+
+    pointer-events: none;
+
+    opacity: .5;
+
+}
+
+
+/* ==========================================================================
+   Elements
+   ========================================================================== */
+
+.avatar__image {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.avatar__initials {
+
+    font-size: var(--text-sm);
+    font-weight: var(--weight-bold);
+    line-height: 1;
+
+    color: var(--text-primary);
+
+}
+
+.avatar > .badge {
+
+    position: absolute;
+
+    top: -0.25rem;
+    right: -0.25rem;
+
+}
+

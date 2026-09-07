@@ -1,0 +1,33 @@
+:root {
+
+    /* Fonts */
+
+    --font-heading: "Century Gothic", sans-serif;
+    --font-body: "Geomanist", "Nunito", "Inter", sans-serif;
+
+    /* Sizes */
+
+    --text-xs: .75rem;
+    --text-sm: .875rem;
+    --text-md: 1rem;
+    --text-lg: 1.125rem;
+    --text-xl: 1.5rem;
+    --text-2xl: 2rem;
+    --text-3xl: 2.5rem;
+    --text-4xl: 3rem;
+
+    /* Weights */
+
+    --weight-light: 300;
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* Line Heights */
+    --line-tight: 1.1;
+    --line-heading: 1.25;
+    --line-body: 1.7;
+    --line-loose: 1.9;
+
+}

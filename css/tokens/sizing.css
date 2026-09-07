@@ -1,0 +1,12 @@
+:root {
+
+    /* Container Widths */
+
+    --container-xs: 540px;
+    --container-sm: 720px;
+    --container-md: 960px;
+    --container-lg: 1140px;
+    --container-xl: 1320px;
+    --container-fluid: 100%;
+
+}

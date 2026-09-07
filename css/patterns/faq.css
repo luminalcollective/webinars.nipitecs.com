@@ -1,0 +1,10 @@
+.faq-item {
+    border: 1px solid var(--border);
+    border-radius: 0;
+    padding: 18px;
+    background: var(--surface-muted);
+}
+
+.faq-item-spaced {
+    margin-top: 10px;
+}

@@ -1,0 +1,130 @@
+/* ==========================================================================
+   Colour Tokens
+   ========================================================================== */
+
+:root {
+
+    /* ======================================================================
+       Primitive Palette
+       Foundation colours. Never use these directly in components.
+       ====================================================================== */
+
+    /* Brand */
+
+    --green-900: #127C3E;
+    --green-500: #8DC63F;
+
+    --orange-500: #F58220;
+
+    /* Neutral */
+
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* Greys */
+
+    --grey-900: #212121;
+    --grey-700: #5F6368;
+    --grey-500: #8A8F98;
+    --grey-300: #D6D6D6;
+    --grey-200: #E5E7EB;
+    --grey-100: #F3F4F6;
+
+    /* Status */
+
+    --red-600: #D32F2F;
+    --red-300: #F5B5B5;
+    --red-100: #FDECEC;
+
+    --blue-600: #1976D2;
+    --blue-300: #B7D4F2;
+    --blue-100: #E8F1FB;
+
+
+    /* ======================================================================
+       Brand Tokens
+       ====================================================================== */
+
+    --brand-primary: var(--green-900);
+    --brand-support: var(--green-500);
+    --brand-accent: var(--orange-500);
+
+
+    /* ======================================================================
+       Brand Variants
+       ====================================================================== */
+
+    --brand-primary-tint: #E7F3EC;
+    --brand-primary-border: #B8DDC7;
+
+    --brand-support-tint: #F2F8E8;
+    --brand-support-border: #CFE7A8;
+
+    --brand-accent-tint: #FFF0E3;
+    --brand-accent-border: #F7C79B;
+
+    --brand-on-primary: var(--white);
+    --brand-on-support: var(--grey-900);
+    --brand-on-accent: var(--grey-900);
+
+
+    /* ======================================================================
+       Semantic Tokens
+       These should be used throughout the application.
+       ====================================================================== */
+
+    /* Background */
+
+    --background: var(--white);
+    --surface: var(--white);
+    --surface-muted: var(--grey-100);
+    --surface-elevated: var(--white);
+
+    /* Text */
+
+    --text-primary: var(--grey-900);
+    --text-secondary: var(--grey-700);
+
+    /* Border */
+
+    --border: var(--grey-200);
+
+    /* Status */
+
+    --success: var(--green-900);
+    --success-tint: var(--brand-primary-tint);
+    --success-border: var(--brand-primary-border);
+    --on-success: var(--brand-on-primary);
+
+    --warning: var(--orange-500);
+    --warning-tint: var(--brand-accent-tint);
+    --warning-border: var(--brand-accent-border);
+    --on-warning: var(--brand-on-accent);
+
+    --danger: var(--red-600);
+    --danger-tint: var(--red-100);
+    --danger-border: var(--red-300);
+    --on-danger: var(--white);
+
+    --info: var(--blue-600);
+    --info-tint: var(--blue-100);
+    --info-border: var(--blue-300);
+    --on-info: var(--white);
+
+   /* Legacy compatibility aliases */
+
+   --nipitecs-dark-background: var(--background);
+   --nipitecs-dark-surface: var(--surface);
+   --nipitecs-dark-elevated-surface: var(--surface-elevated);
+   --nipitecs-dark-muted-surface: var(--surface-muted);
+   --nipitecs-dark-text: var(--text-primary);
+   --nipitecs-dark-secondary-text: var(--text-secondary);
+   --nipitecs-dark-border: var(--border);
+   --nipitecs-lime: var(--brand-support);
+   --nipitecs-green: var(--brand-primary);
+   --nipitecs-orange: var(--brand-accent);
+   --nipitecs-green-tint: var(--brand-primary-tint);
+   --nipitecs-orange-tint: var(--brand-accent-tint);
+   --nipitecs-dark-contrast: var(--white);
+
+}
